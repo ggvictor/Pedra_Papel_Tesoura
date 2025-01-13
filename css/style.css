@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Bangers", serif;
+}
+body{
+    background-color: #056914;
+}
+header{
+    display: flex;
+}
+header img{
+    height: 200px;
+}
+.pontuação{
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+}
+.row{
+    display: flex;
+    margin: 5px;
+}
+.row p{
+    margin-right: 17px;
+}
+.jokenpo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.escolha{
+    margin-bottom: 30px;
+}
+.jokenpo img{
+    height: 200px;
+}
+.papel, .pedra, .tesoura{
+    background-color: #053D0D;
+    padding: 10px;
+    width: 250px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+    -web-kit-box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+    -moz-box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+    cursor: pointer;
+}
+.papel{
+    margin-right: 150px;
+    margin-left: 100px;
+}
+.tesoura{
+    margin-right: 20px;
+}
+.pedra_gon,.papel_gon,.tesoura_gon{
+    margin: 0 100px 30px 100px;
+}
+.resultado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.resultado_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.resultado img{
+    background-color: #053D0D;
+    padding: 10px;
+    width: 250px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+    -web-kit-box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+    -moz-box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
+}
+
+.column{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.column p{
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+p.left{
+    margin-left: 160px;
+}
