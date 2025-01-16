@@ -52,6 +52,7 @@ header img{
 }
 .tesoura{
     margin-right: 20px;
+    height: 150px;
 }
 .pedra_gon,.papel_gon,.tesoura_gon{
     margin: 0 100px 30px 100px;
@@ -71,7 +72,7 @@ header img{
 .resultado img{
     background-color: #053D0D;
     padding: 10px;
-    width: 250px; /* Largura fixa */
+    width: 170px; /* Largura fixa */
     height: 200px; /* Altura fixa */
     box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
     -web-kit-box-shadow: 10px 14px 15px -3px rgba(0, 0,0, 1);
