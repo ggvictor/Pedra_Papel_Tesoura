@@ -32,29 +32,12 @@ function addDiv(){
     container.appendChild(resultDiv)
 }
 
-function choicePedra (){
+function choice(imagem){
     if (resultDiv) {
         let img = resultDiv.querySelector(".voce")
         let botImg = resultDiv.querySelector(".bot")
         botImg.src =`${jokenpo[randomImg()].src}`
-        img.src = "img/pedra.png"
-    }
-}
-
-function choicePapel (){
-    if (resultDiv) {
-        let img = resultDiv.querySelector(".voce")
-        let botImg = resultDiv.querySelector(".bot")
-        botImg.src =`${jokenpo[randomImg()].src}`
-        img.src = "img/papel.png"
-    }
-}
-function choiceTesoura (){
-    if (resultDiv) {
-        let img = resultDiv.querySelector(".voce")
-        let botImg = resultDiv.querySelector(".bot")
-        botImg.src =`${jokenpo[randomImg()].src}`
-        img.src = "img/tesoura.png"
+        img.src = imagem.src
     }
 }
 
@@ -72,12 +55,12 @@ window.addEventListener("load",() =>{
     addDiv()
 })
 pedra.addEventListener("click", () =>{
-    choicePedra()
+    choice(pedra)
 });
 papel.addEventListener("click", () =>{
-    choicePapel()
+    choice(papel)
     console.log("certo")
 });
 tesoura.addEventListener("click", () =>{
-    choiceTesoura()
+    choice(tesoura)
 });
