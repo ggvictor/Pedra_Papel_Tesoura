@@ -42,11 +42,37 @@ function choice(imagem){
 }
 
 function results(){
+    let pontuacao = "DRAW"
     let img = resultDiv.querySelector(".voce")
     let botImg = resultDiv.querySelector(".bot")
+    if( (img.src == pedra.src && botImg.src == tesoura.src) ||
+        (img.src == tesoura.src && botImg.src == papel.src) ||
+        (img.src == papel.src && botImg.src == pedra.src)){
+        pontuacao = "WINNER" 
+    }
+    else if((img.src == tesoura.src && botImg.src == pedra.src) ||
+            (img.src == papel.src && botImg.src == tesoura.src) ||
+            (img.src == pedra.src && botImg.src == papel.src)){
+        pontuacao = "LOSE"
+    }
+    else{
+        pontuacao = "DRAW"
+    }
 
-    // terminar essa parte usando switch case!!!
-}
+        switch (pontuacao) {
+            case "WINNER":
+                scoreYou.textContent = Number(scoreYou.textContent) + 1;
+                break;
+            case "LOSE":
+                scoreBot.textContent = Number(scoreBot.textContent) + 1;
+                break;
+            case "DRAW":
+                console.log("EMPATE")
+                break;
+            default:
+                break;
+        }
+    }
 
 
 // Eventos
@@ -56,11 +82,13 @@ window.addEventListener("load",() =>{
 })
 pedra.addEventListener("click", () =>{
     choice(pedra)
+    results()
 });
 papel.addEventListener("click", () =>{
     choice(papel)
-    console.log("certo")
+    results()
 });
 tesoura.addEventListener("click", () =>{
     choice(tesoura)
+    results()
 });
